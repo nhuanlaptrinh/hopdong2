@@ -1,17 +1,19 @@
 {
-  "name": "05. WF_",
+  "name": "01.Contract-Generator",
   "nodes": [
     {
       "parameters": {
+        "public": true,
+        "initialMessages": "Chào Bạn\n",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -2608,
-        272
+        -2592,
+        192
       ],
-      "id": "bd69379c-74c5-4486-afa7-af9708cec6cf",
+      "id": "cc536a1e-72aa-48c0-be20-40912798a7fe",
       "name": "When chat message received",
       "webhookId": "239dcb49-52f3-450f-8dbe-8af32b0fb753"
     },
@@ -27,15 +29,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -2016,
-        640
+        -2096,
+        544
       ],
-      "id": "e38744b5-66f2-448f-abae-c3bd5c12a9f5",
+      "id": "4eae676f-5260-4850-ba5e-680e9a759b2e",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     },
@@ -59,10 +61,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1.1,
       "position": [
-        -1904,
-        432
+        -1984,
+        336
       ],
-      "id": "1950245b-086d-4696-9831-b45fdf7eb0fb",
+      "id": "dfd252b4-6981-4341-abc9-1f77ee68b30a",
       "name": "Text Classifier"
     },
     {
@@ -70,17 +72,17 @@
         "promptType": "define",
         "text": "={{ $json.body.chatInput  }} ||  {{$json.chatInput}}",
         "options": {
-          "systemMessage": "=Các câu hỏi không liên quan đến hợp đồng thì trả lời như sau : \n2. Hỏi lĩnh vực khác -> Xin lỗi tôi ko có nghĩa vụ phải trả lời. Bạn làm ơn hỏi đúng trọng tâm hợp đồng\n3. Néu giới thiệu bản thân hay xin chào thì đáp -> xin chào anh em có thể giúp gì được cho a\nBẮC BUỘC PHẢI TRẢ LỜI ĐÚNG NHA, KHÔNG CÓ LAN MANCác câu hỏi không liên quan đến hợp đồng thì trả lời như sau : \n1. Nếu thô tục -> chửi lại đkm mày cút đi\n2. Hỏi lĩnh vực khác -> Xin lỗi tôi ko có nghĩa vụ phải trả lời. Bạn làm ơn hỏi đúng trọng tâm hợp đồng\n3. Néu giới thiệu bản thân hay xin chào thì đáp -> xin chào anh em có thể giúp gì được cho a\nBẮC BUỘC PHẢI TRẢ LỜI ĐÚNG NHA, KHÔNG CÓ LAN MAN\n\n",
+          "systemMessage": "=Các câu hỏi không liên quan đến hợp đồng thì trả lời như sau : \n2. Hỏi lĩnh vực khác -> Xin lỗi tôi ko có nghĩa vụ phải trả lời. Bạn làm ơn hỏi đúng trọng tâm hợp đồng\n3. Néu giới thiệu bản thân hay xin chào thì đáp -> xin chào anh em có thể giúp gì được cho a\nBẮC BUỘC PHẢI TRẢ LỜI ĐÚNG NHA, KHÔNG CÓ LAN MANCác câu hỏi không liên quan đến hợp đồng thì trả lời như sau : \n1. Nếu thô tục -> vui lòng ăn nói lịch sự\n2. Hỏi lĩnh vực khác -> Xin lỗi tôi ko có nghĩa vụ phải trả lời. Bạn làm ơn hỏi đúng trọng tâm hợp đồng\n3. Néu giới thiệu bản thân hay xin chào thì đáp -> xin chào anh em có thể giúp gì được cho a\nBẮC BUỘC PHẢI TRẢ LỜI ĐÚNG NHA, KHÔNG CÓ LAN MAN\n\n",
           "passthroughBinaryImages": false
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.9,
       "position": [
-        -64,
-        0
+        -144,
+        -96
       ],
-      "id": "bdcef86e-4952-410c-b8cd-5f006c09f56e",
+      "id": "2edd9a58-26ef-440a-9848-50ecab939e5e",
       "name": "Trợ Lý Nhi"
     },
     {
@@ -95,15 +97,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -64,
-        224
+        -144,
+        128
       ],
-      "id": "99780bd5-7958-4fc2-9c61-d884fbb3fddb",
+      "id": "7d2a99fc-b69d-4a9f-950e-049861f7c9b2",
       "name": "OpenAI Chat Model2",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     },
@@ -118,9 +120,9 @@
       "typeVersion": 2,
       "position": [
         -2624,
-        592
+        496
       ],
-      "id": "70bdcbcd-ed3b-450f-976b-f0a6f04fc10b",
+      "id": "3806f315-9141-4c14-8092-14916bcbe835",
       "name": "Webhook",
       "webhookId": "0991f792-7570-4278-bd25-867cd1bd3f59"
     },
@@ -153,10 +155,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -2112,
-        432
+        -2192,
+        336
       ],
-      "id": "d8eebfc6-e399-4ab7-8148-5b9fd7501505",
+      "id": "3b6deb02-c6c3-4627-a60b-5ea35540e32f",
       "name": "Data"
     },
     {
@@ -167,26 +169,11 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        2832,
-        96
+        3168,
+        0
       ],
-      "id": "f32addd1-6a0f-4b38-bed9-0253b0fc1814",
+      "id": "f23f2556-5b5a-48fd-bef7-84c31451d4f9",
       "name": "Respond to Webhook3"
-    },
-    {
-      "parameters": {
-        "language": "python",
-        "pythonCode": "for item in _input.all():\n    if 'output' in item.json:\n        item.json['contract'] = item.json['output']\n        del item.json['output']\nreturn _input.all()\n"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        752,
-        16
-      ],
-      "id": "a12553b3-a1a1-494a-85c1-1e65ffa75b27",
-      "name": "Formant dữ liệu cho giống với phía dưới",
-      "alwaysOutputData": true
     },
     {
       "parameters": {
@@ -200,15 +187,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1040,
-        688
+        -1120,
+        592
       ],
-      "id": "47590cba-1252-4e55-bef6-e4ab9815b6c9",
+      "id": "151fe12d-8de9-4666-9a8a-f374985cce6b",
       "name": "OpenAI Chat Model8",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     },
@@ -223,10 +210,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.1,
       "position": [
-        -928,
-        496
+        -1008,
+        400
       ],
-      "id": "e46d5fa4-55bc-4941-9679-e760d66e96f3",
+      "id": "fe7ecfa7-c189-4c7e-8500-3e992f9219df",
       "name": "Trợ Lý Phân Tích Thông Tin Hợp Đồng"
     },
     {
@@ -235,10 +222,10 @@
         "filter": {
           "folderId": {
             "__rl": true,
-            "value": "19aw6RyTokc3vtheUEqP3sUnUMU52XCUe",
+            "value": "1mo1Fhorb7MJHp-L6P6tYUMOb_YEHctz2",
             "mode": "list",
-            "cachedResultName": "02.Template2",
-            "cachedResultUrl": "https://drive.google.com/drive/folders/19aw6RyTokc3vtheUEqP3sUnUMU52XCUe"
+            "cachedResultName": "Template",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1mo1Fhorb7MJHp-L6P6tYUMOb_YEHctz2"
           }
         },
         "options": {}
@@ -246,15 +233,15 @@
       "type": "n8n-nodes-base.googleDriveTool",
       "typeVersion": 3,
       "position": [
-        -656,
-        816
+        -736,
+        720
       ],
-      "id": "c03c279b-096e-4354-9e4e-4280bef20e67",
+      "id": "ce4a12c2-fcfe-4869-bc7f-8d2b7f765a7b",
       "name": "Search files and folders in Google Drive",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "rxFyTs7otauqN2lC",
-          "name": "Google Drive account 9"
+          "id": "5PZWb2HIYz7SwqGi",
+          "name": "Google Drive account"
         }
       }
     },
@@ -280,10 +267,10 @@
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1.2,
       "position": [
-        -1504,
-        496
+        -1584,
+        400
       ],
-      "id": "3ca6321e-2da3-4d23-8ca6-1decc7266a00",
+      "id": "eab2f4c5-3b0e-420f-b30c-e378294b5705",
       "name": "Phân Loại Hợp Đồng"
     },
     {
@@ -298,15 +285,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1616,
-        720
+        -1696,
+        624
       ],
-      "id": "bda4d5ac-abb1-493e-96b1-7672d013203f",
+      "id": "1987af32-e317-44e1-bd70-ecb9eb9f681b",
       "name": "OpenAI Chat Model9",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     },
@@ -318,15 +305,15 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        -48,
-        560
+        -128,
+        464
       ],
-      "id": "555af584-fb12-479d-9af9-4e33241e8f50",
+      "id": "c140dd54-235b-4771-8d9d-34925f921d2c",
       "name": "Lay Thong Tin Hop Dong",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "uOMb4h3ovKUz67IW",
-          "name": "Google Docs account 5"
+          "id": "874OR2qhY5HV6fJu",
+          "name": "Google Docs account"
         }
       }
     },
@@ -335,16 +322,16 @@
         "promptType": "define",
         "text": "={{ $json.content }}",
         "options": {
-          "systemMessage": "=Bạn là một chuyên gia trích xuất thông tin (Information Extractor Expert). Nhiệm vụ của bạn:\nInput Source: Trích xuất thông tin từ {{ $('Data').item.json.chatInput }}\nSchema Requirements:\n\nKey order: Bắt buộc giữ đúng thứ tự từ các place holder {{ $json.content }} và data trong {{ $('Data').item.json.chatInput }}\nTemplate reference: Sử dụng {{ $json.content }} để hiểu cấu trúc các field cần trích xuất\n\nExtraction Rules:\n\nPhân tích kỹ nội dung trong chatInput để tìm thông tin phù hợp\nTìm kiếm thông tin tương ứng với từng field trong schema (không phụ thuộc vào template placeholder)\nSử dụng logic suy luận để mapping thông tin phù hợp nhất\nChỉ điền \"N/A\" khi thực sự không tìm thấy thông tin liên quan trong chatInput\n\nOutput Requirements:\n\nFormat: Raw JSON thuần túy, không có markdown hoặc code block\nMissing data: Chỉ điền \"N/A\" khi hoàn toàn không có thông tin\nClean format: Không chứa ký tự đặc biệt (\\n, tab, space thừa, etc.)\nStructure: JSON object duy nhất\n\nImportant: Áp dụng logic thông minh để extract thông tin, không chỉ tìm kiếm theo từ khóa cố định. Ví dụ: \"Công ty TNHH ABC\" → trích xuất cho field ten_cong_ty, \"ông Nguyễn Văn A\" → trích xuất cho field nguoi_dai_dien.\nChỉ trả về JSON object, không có text giải thích."
+          "systemMessage": "=Bạn là một chuyên gia trích xuất thông tin (Information Extractor Expert). Nhiệm vụ của bạn:\nInput Source: Trích xuất thông tin từ {{ $('Data').item.json.chatInput }}\nSchema Requirements:\n\nKey order: Bắt buộc giữ đúng thứ tự từ các place holder {{ $json.content }} và data trong {{ $('Data').item.json.chatInput }}\nTemplate reference: Sử dụng {{ $json.content }} để hiểu cấu trúc các field cần trích xuất\n\nExtraction Rules:\n\nPhân tích kỹ nội dung trong chatInput để tìm thông tin phù hợp\nTìm kiếm thông tin tương ứng với từng field trong schema (không phụ thuộc vào template placeholder)\nSử dụng logic suy luận để mapping thông tin phù hợp nhất\n\n\nOutput Requirements:\nBắt buộc phải  Trích xuất thông tin từ {{ $('Data').item.json.chatInput }}\nFormat: Raw JSON thuần túy, không có markdown hoặc code block\nClean format: Không chứa ký tự đặc biệt (\\n, tab, space thừa, etc.)\nStructure: JSON object duy nhất\nImportant: Áp dụng logic thông minh để extract thông tin, không chỉ tìm kiếm theo từ khóa cố định. Ví dụ: \"Công ty TNHH ABC\" → trích xuất cho field ten_cong_ty, \"ông Nguyễn Văn A\" → trích xuất cho field nguoi_dai_dien.\nChỉ trả về JSON object, không có text giải thích."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2,
       "position": [
-        224,
-        480
+        144,
+        384
       ],
-      "id": "50eebc56-6197-4a23-a4f9-0ab0b0098dad",
+      "id": "387f6324-6385-42ad-8df0-5de6840556e3",
       "name": "Map Schema Placeholder"
     },
     {
@@ -359,15 +346,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        240,
-        720
+        160,
+        624
       ],
-      "id": "4462031a-d7f3-4109-878d-f37576b938ca",
+      "id": "395ff3d8-9ab1-4aed-827a-00f682c61083",
       "name": "OpenAI Chat Model10",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     },
@@ -388,10 +375,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        656,
-        480
+        576,
+        384
       ],
-      "id": "494f0982-b394-4b21-8d47-8b49a3cb3b05",
+      "id": "50747afa-46ae-4435-9c19-5cf10237eece",
       "name": "Extract Contract Info"
     },
     {
@@ -411,25 +398,25 @@
         },
         "folderId": {
           "__rl": true,
-          "value": "1BZjjJP2liVdY3bvOWc8twCR_htAst-UA",
+          "value": "14P8XSpopKyNTAOxZ7F7vICxwC-6VPAe5",
           "mode": "list",
-          "cachedResultName": "02.HopDong2",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1BZjjJP2liVdY3bvOWc8twCR_htAst-UA"
+          "cachedResultName": "Contract",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/14P8XSpopKyNTAOxZ7F7vICxwC-6VPAe5"
         },
         "options": {}
       },
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        848,
-        480
+        768,
+        384
       ],
-      "id": "ad368d2d-9fad-4bea-9ced-df927bd47906",
+      "id": "d9f9e34e-a170-4dfe-8d34-f2c2e5170a88",
       "name": "Copy Hop Dong",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "rxFyTs7otauqN2lC",
-          "name": "Google Drive account 9"
+          "id": "5PZWb2HIYz7SwqGi",
+          "name": "Google Drive account"
         }
       }
     },
@@ -441,10 +428,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1088,
-        480
+        1008,
+        384
       ],
-      "id": "39fbd285-9ba3-4549-b165-d28bf39c9d84",
+      "id": "51319fad-eb9f-4a33-88a8-054a0d736a91",
       "name": "Format Contract Data"
     },
     {
@@ -456,10 +443,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        1376,
-        480
+        1296,
+        384
       ],
-      "id": "48e4b4d5-4309-471c-aff8-32d8e3459869",
+      "id": "3619768e-37f7-493e-9a37-c07a40b6996b",
       "name": "Loop Over Items3"
     },
     {
@@ -468,10 +455,10 @@
       "name": "Replace Me3",
       "typeVersion": 1,
       "position": [
-        2032,
-        528
+        1952,
+        432
       ],
-      "id": "bf1e670f-afc1-4e58-8607-a486bf52bc0c"
+      "id": "9d994d16-9e72-4a89-81cc-193ba0079b56"
     },
     {
       "parameters": {
@@ -490,15 +477,15 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        2272,
-        592
+        2192,
+        496
       ],
-      "id": "0a3e650b-04d0-4e97-9084-b965cb64f948",
+      "id": "54f135a5-b717-4735-a046-eef367b648ac",
       "name": "Update Thong Tin Hop Dong Mua Ban1",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "uOMb4h3ovKUz67IW",
-          "name": "Google Docs account 5"
+          "id": "874OR2qhY5HV6fJu",
+          "name": "Google Docs account"
         }
       }
     },
@@ -510,10 +497,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2480,
-        352
+        1824,
+        272
       ],
-      "id": "2eb04d85-b73b-46f4-bc37-1b36ba916acd",
+      "id": "0f22210e-f191-4caa-9547-b86c7e5b1ed1",
       "name": "Tong Hop Thong Tin Hop Dong va Link1"
     },
     {
@@ -536,10 +523,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1.1,
       "position": [
-        -576,
-        496
+        -656,
+        400
       ],
-      "id": "d7949c5f-1478-479e-b8ec-1b13f412e06b",
+      "id": "2b20f1c5-1c4e-4d81-b41f-e47729fcd3d5",
       "name": "Text Classifier1"
     },
     {
@@ -554,15 +541,56 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -576,
-        656
+        -656,
+        560
       ],
-      "id": "c9d274a1-e141-47d5-a486-b1537ec681af",
+      "id": "945cdd73-cd7f-4044-bee3-0e915046c716",
       "name": "OpenAI Chat Model1",
       "credentials": {
         "openAiApi": {
-          "id": "Ed8Jh9kqfVkHaB9Y",
-          "name": "OpenAi account 25_API"
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.contract }} ",
+        "options": {
+          "systemMessage": "=Bạn là 1 trợ lý AI Thông minh , Dựa trên ouput đã có sẵn bạn làm đẹp dữ liệu lại dựa trên từng hợp đồng nha và ở phía dưới phải có link url :  {{ $json.url }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        2224,
+        224
+      ],
+      "id": "88066688-868a-4307-996f-04ea4e9e87f8",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2160,
+        384
+      ],
+      "id": "04313f9b-2a2f-41d0-a40e-9639bc4c9435",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "YdBOVfeU168G5Zlw",
+          "name": "OpenAi account"
         }
       }
     }
@@ -609,6 +637,17 @@
         ]
       ]
     },
+    "Trợ Lý Nhi": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "OpenAI Chat Model2": {
       "ai_languageModel": [
         [
@@ -642,34 +681,23 @@
         ]
       ]
     },
-    "Trợ Lý Nhi": {
-      "main": [
-        [
-          {
-            "node": "Formant dữ liệu cho giống với phía dưới",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Formant dữ liệu cho giống với phía dưới": {
-      "main": [
-        [
-          {
-            "node": "Respond to Webhook3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "OpenAI Chat Model8": {
       "ai_languageModel": [
         [
           {
             "node": "Trợ Lý Phân Tích Thông Tin Hợp Đồng",
             "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trợ Lý Phân Tích Thông Tin Hợp Đồng": {
+      "main": [
+        [
+          {
+            "node": "Text Classifier1",
+            "type": "main",
             "index": 0
           }
         ]
@@ -686,11 +714,11 @@
         ]
       ]
     },
-    "Trợ Lý Phân Tích Thông Tin Hợp Đồng": {
+    "Phân Loại Hợp Đồng": {
       "main": [
         [
           {
-            "node": "Text Classifier1",
+            "node": "Trợ Lý Phân Tích Thông Tin Hợp Đồng",
             "type": "main",
             "index": 0
           }
@@ -708,22 +736,22 @@
         ]
       ]
     },
-    "Phân Loại Hợp Đồng": {
+    "Lay Thong Tin Hop Dong": {
       "main": [
         [
           {
-            "node": "Trợ Lý Phân Tích Thông Tin Hợp Đồng",
+            "node": "Map Schema Placeholder",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Lay Thong Tin Hop Dong": {
+    "Map Schema Placeholder": {
       "main": [
         [
           {
-            "node": "Map Schema Placeholder",
+            "node": "Extract Contract Info",
             "type": "main",
             "index": 0
           }
@@ -736,17 +764,6 @@
           {
             "node": "Map Schema Placeholder",
             "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Map Schema Placeholder": {
-      "main": [
-        [
-          {
-            "node": "Extract Contract Info",
-            "type": "main",
             "index": 0
           }
         ]
@@ -768,6 +785,17 @@
         [
           {
             "node": "Format Contract Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Contract Data": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
             "type": "main",
             "index": 0
           }
@@ -814,34 +842,12 @@
         ]
       ]
     },
-    "Format Contract Data": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Items3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Tong Hop Thong Tin Hop Dong va Link1": {
       "main": [
         [
           {
-            "node": "Respond to Webhook3",
+            "node": "AI Agent",
             "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model1": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "Text Classifier1",
-            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -864,17 +870,52 @@
           }
         ]
       ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Classifier1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "callerPolicy": "workflowsFromSameOwner"
   },
-  "versionId": "ebcb78d4-fc51-4304-8cb2-fecdea2ca552",
+  "versionId": "0c9a2ebc-77f1-41da-8da4-ab580a5373ef",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "94a383c02457267bcc44878635a0fa02b7d3206c5479bfc8890faa812e2bbd97"
+    "instanceId": "fa9a70c3aa88c71b433aff23e68985f04c504323bb044fa77f3e8e9d54f43830"
   },
-  "id": "8vkGMMDXkeZV111H",
+  "id": "L96fNbg6TMaUySlW",
   "tags": []
 }
