@@ -1,5 +1,4 @@
 {
-  "name": "01.Contract-Generator",
   "nodes": [
     {
       "parameters": {
@@ -10,10 +9,10 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -2592,
-        192
+        2240,
+        1824
       ],
-      "id": "cc536a1e-72aa-48c0-be20-40912798a7fe",
+      "id": "52700cf2-de2e-4945-8cfd-761732084224",
       "name": "When chat message received",
       "webhookId": "239dcb49-52f3-450f-8dbe-8af32b0fb753"
     },
@@ -29,14 +28,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -2096,
-        544
+        2736,
+        2176
       ],
-      "id": "4eae676f-5260-4850-ba5e-680e9a759b2e",
+      "id": "4c6bf275-d467-46d3-bd30-83c184f6e95e",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -61,10 +60,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1.1,
       "position": [
-        -1984,
-        336
+        2848,
+        1968
       ],
-      "id": "dfd252b4-6981-4341-abc9-1f77ee68b30a",
+      "id": "b44debd9-3316-491d-9c89-4cab478244db",
       "name": "Text Classifier"
     },
     {
@@ -79,10 +78,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.9,
       "position": [
-        -144,
-        -96
+        4688,
+        1536
       ],
-      "id": "2edd9a58-26ef-440a-9848-50ecab939e5e",
+      "id": "4226ce09-daf8-4ab2-b4b0-aaffa3c8da36",
       "name": "Trợ Lý Nhi"
     },
     {
@@ -97,14 +96,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -144,
-        128
+        4688,
+        1760
       ],
-      "id": "7d2a99fc-b69d-4a9f-950e-049861f7c9b2",
+      "id": "ce0d2552-7e19-4bc2-9554-40d0e6b88968",
       "name": "OpenAI Chat Model2",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -119,10 +118,10 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -2624,
-        496
+        2208,
+        2128
       ],
-      "id": "3806f315-9141-4c14-8092-14916bcbe835",
+      "id": "9e4b64cd-e98e-463a-a78b-5664e0b7be28",
       "name": "Webhook",
       "webhookId": "0991f792-7570-4278-bd25-867cd1bd3f59"
     },
@@ -155,10 +154,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -2192,
-        336
+        2640,
+        1968
       ],
-      "id": "3b6deb02-c6c3-4627-a60b-5ea35540e32f",
+      "id": "0511db5b-f499-4160-8741-e30d7f8ef714",
       "name": "Data"
     },
     {
@@ -169,10 +168,10 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        3168,
-        0
+        8624,
+        1632
       ],
-      "id": "f23f2556-5b5a-48fd-bef7-84c31451d4f9",
+      "id": "321a05f4-6005-434f-bc3a-eeb3fbe8ab69",
       "name": "Respond to Webhook3"
     },
     {
@@ -187,14 +186,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1120,
-        592
+        3712,
+        2224
       ],
-      "id": "151fe12d-8de9-4666-9a8a-f374985cce6b",
+      "id": "f8de8a72-9eed-49d4-83ff-93ad263fdba8",
       "name": "OpenAI Chat Model8",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -210,10 +209,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.1,
       "position": [
-        -1008,
-        400
+        3824,
+        2032
       ],
-      "id": "fe7ecfa7-c189-4c7e-8500-3e992f9219df",
+      "id": "248590cf-9199-42e0-a066-8c23d620a46a",
       "name": "Trợ Lý Phân Tích Thông Tin Hợp Đồng"
     },
     {
@@ -233,14 +232,14 @@
       "type": "n8n-nodes-base.googleDriveTool",
       "typeVersion": 3,
       "position": [
-        -736,
-        720
+        4096,
+        2352
       ],
-      "id": "ce4a12c2-fcfe-4869-bc7f-8d2b7f765a7b",
+      "id": "825b81ad-9ea2-4cb7-8bc7-7dd42bf01a31",
       "name": "Search files and folders in Google Drive",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "5PZWb2HIYz7SwqGi",
+          "id": "jqgepkLF44KNH6uA",
           "name": "Google Drive account"
         }
       }
@@ -267,10 +266,10 @@
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1.2,
       "position": [
-        -1584,
-        400
+        3248,
+        2032
       ],
-      "id": "eab2f4c5-3b0e-420f-b30c-e378294b5705",
+      "id": "bc56dae2-2465-4cc4-8097-9f21c000b844",
       "name": "Phân Loại Hợp Đồng"
     },
     {
@@ -285,14 +284,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -1696,
-        624
+        3136,
+        2256
       ],
-      "id": "1987af32-e317-44e1-bd70-ecb9eb9f681b",
+      "id": "62170cc0-d76a-4727-bdc8-716b669ad2fc",
       "name": "OpenAI Chat Model9",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -305,14 +304,14 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        -128,
-        464
+        4704,
+        2096
       ],
-      "id": "c140dd54-235b-4771-8d9d-34925f921d2c",
+      "id": "8557cd6f-1c4c-4ddc-b6b7-a2160ab0d111",
       "name": "Lay Thong Tin Hop Dong",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "874OR2qhY5HV6fJu",
+          "id": "HCezXpiBUWYRjWnA",
           "name": "Google Docs account"
         }
       }
@@ -328,10 +327,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2,
       "position": [
-        144,
-        384
+        4976,
+        2016
       ],
-      "id": "387f6324-6385-42ad-8df0-5de6840556e3",
+      "id": "c0c48f29-2b59-40d9-b937-e788c07d460f",
       "name": "Map Schema Placeholder"
     },
     {
@@ -346,14 +345,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        160,
-        624
+        4992,
+        2256
       ],
-      "id": "395ff3d8-9ab1-4aed-827a-00f682c61083",
+      "id": "8d9301a3-f8ab-413c-9c5c-157b57cc2b8d",
       "name": "OpenAI Chat Model10",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -375,10 +374,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        576,
-        384
+        5296,
+        2016
       ],
-      "id": "50747afa-46ae-4435-9c19-5cf10237eece",
+      "id": "b68a3b9d-17f7-41f6-b501-3fbfb524719e",
       "name": "Extract Contract Info"
     },
     {
@@ -408,30 +407,30 @@
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        768,
-        384
+        5472,
+        2016
       ],
-      "id": "d9f9e34e-a170-4dfe-8d34-f2c2e5170a88",
+      "id": "f6776e88-4263-4242-ba41-7adbf3842d94",
       "name": "Copy Hop Dong",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "5PZWb2HIYz7SwqGi",
+          "id": "jqgepkLF44KNH6uA",
           "name": "Google Drive account"
         }
       }
     },
     {
       "parameters": {
-        "language": "python",
-        "pythonCode": "result = []\nfor item in _('Extract Contract Info').all():\n    input_data = item.json\n    if 'output' in input_data:\n        output_data = input_data['output']\n        for key, value in output_data.items():\n            result.append({\n                \"key\": key,\n                \"value\": value\n            })\nreturn result"
+        "language": "pythonNative",
+        "pythonCode": "result = []\ncontract = _items[0][\"json\"].get(\"output\", {})\n\n# Case 1: output là dict\nif isinstance(contract, dict):\n    for key, value in contract.items():\n        result.append({\"json\": {\"key\": key, \"value\": value}})\n    return result\n\n# Case 2: output là string JSON phẳng {\"a\":\"\", \"b\":\"\", ...}\nif isinstance(contract, str):\n    s = contract.strip()\n\n    # bỏ { } nếu có\n    if len(s) >= 2 and s[0] == \"{\" and s[-1] == \"}\":\n        s = s[1:-1].strip()\n\n    if s:\n        parts = s.split(\",\")\n        for part in parts:\n            if \":\" not in part:\n                continue\n            k, v = part.split(\":\", 1)\n            k = k.strip().strip('\"')\n            v = v.strip()\n\n            # bỏ quote value nếu là string\n            if len(v) >= 2 and v[0] == '\"' and v[-1] == '\"':\n                v = v[1:-1]\n\n            # unescape tối thiểu\n            v = v.replace('\\\\\"', '\"').replace('\\\\\\\\', '\\\\')\n\n            result.append({\"json\": {\"key\": k, \"value\": v}})\n\n    return result\n\n# Case khác thì trả rỗng\nreturn result\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1008,
-        384
+        6048,
+        2016
       ],
-      "id": "51319fad-eb9f-4a33-88a8-054a0d736a91",
+      "id": "fedd2303-9aea-4766-96e3-20ec122c7dfd",
       "name": "Format Contract Data"
     },
     {
@@ -443,10 +442,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        1296,
-        384
+        6336,
+        2016
       ],
-      "id": "3619768e-37f7-493e-9a37-c07a40b6996b",
+      "id": "06aba9f8-9d89-4e15-a5f4-fbade61bfa81",
       "name": "Loop Over Items3"
     },
     {
@@ -455,10 +454,10 @@
       "name": "Replace Me3",
       "typeVersion": 1,
       "position": [
-        1952,
-        432
+        7408,
+        2064
       ],
-      "id": "9d994d16-9e72-4a89-81cc-193ba0079b56"
+      "id": "99c9ce2c-af5f-477d-ad54-d799867c4451"
     },
     {
       "parameters": {
@@ -477,30 +476,30 @@
       "type": "n8n-nodes-base.googleDocs",
       "typeVersion": 2,
       "position": [
-        2192,
-        496
+        7648,
+        2128
       ],
-      "id": "54f135a5-b717-4735-a046-eef367b648ac",
+      "id": "2049a94c-7b10-4e40-9908-ec1743a15bea",
       "name": "Update Thong Tin Hop Dong Mua Ban1",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "874OR2qhY5HV6fJu",
+          "id": "HCezXpiBUWYRjWnA",
           "name": "Google Docs account"
         }
       }
     },
     {
       "parameters": {
-        "language": "python",
-        "pythonCode": "# Khởi tạo\nres = []\ncontract = {}\ndocument_id = \"\"\n\n# Xử lý dữ liệu từ Map Schema Placeholder\nfor item in _('Map Schema Placeholder').all():\n    contract = item.json[\"output\"]\n    break\n\n# Xử lý tìm document_id từ Copy Hop Dong  \nfor item in _('Copy Hop Dong').all():\n    document_id = item.json[\"id\"]\n    break\n\n# Tạo URL Google Docs\nurl = f\"https://docs.google.com/document/d/{document_id}/edit?tab=t.0\"\n\n# Tạo output cho webhook\noutput = {\n    \"json\": {\n        \"contract\": contract,\n        \"url\": url,\n      }\n}\n\n# Append vào result\nres.append(output)\n\n# Trả về kết quả\nreturn res"
+        "language": "pythonNative",
+        "pythonCode": "# Khởi tạo\nres = []\n\ninput0 = _items[0][\"json\"] if _items and len(_items) > 0 else {}\n\ncontract_id = input0.get(\"contract_id\", \"\")\ncontract_name = input0.get(\"contract_name\", \"\")\n\n# Lấy contract và document_id trực tiếp từ input\ncontract = input0.get(\"output\", {})\ndocument_id = contract_id\n\n# Tạo URL Google Docs\nurl = f\"https://docs.google.com/document/d/{document_id}/edit?tab=t.0\" if document_id else \"\"\n\n# Trả về đúng format n8n: array of dict, mỗi dict có 'json'\nres.append({\n    \"json\": {\n        \"contract_id\": contract_id,\n        \"contract_name\": contract_name,\n        \"contract\": contract,\n        \"url\": url,\n    }\n})\n\nreturn res\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1824,
-        272
+        7200,
+        1904
       ],
-      "id": "0f22210e-f191-4caa-9547-b86c7e5b1ed1",
+      "id": "7d748600-13e1-48db-9f91-013bfc9c4abb",
       "name": "Tong Hop Thong Tin Hop Dong va Link1"
     },
     {
@@ -523,10 +522,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1.1,
       "position": [
-        -656,
-        400
+        4176,
+        2032
       ],
-      "id": "2b20f1c5-1c4e-4d81-b41f-e47729fcd3d5",
+      "id": "76817159-5ef6-40e2-b03e-60f89322b94e",
       "name": "Text Classifier1"
     },
     {
@@ -541,14 +540,14 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -656,
-        560
+        4176,
+        2192
       ],
-      "id": "945cdd73-cd7f-4044-bee3-0e915046c716",
+      "id": "6ec99cd2-60cb-4d23-855d-1ca725c80b85",
       "name": "OpenAI Chat Model1",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
@@ -564,10 +563,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
       "position": [
-        2224,
-        224
+        7680,
+        1856
       ],
-      "id": "88066688-868a-4307-996f-04ea4e9e87f8",
+      "id": "0a8a6b53-a48f-48bd-89d8-af03eed081b4",
       "name": "AI Agent"
     },
     {
@@ -582,20 +581,91 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        2160,
-        384
+        7616,
+        2016
       ],
-      "id": "04313f9b-2a2f-41d0-a40e-9639bc4c9435",
+      "id": "3a23d480-92df-4c22-a9b4-faa2c93148b5",
       "name": "OpenAI Chat Model3",
       "credentials": {
         "openAiApi": {
-          "id": "YdBOVfeU168G5Zlw",
+          "id": "JGBhwOZYkSSJv0pu",
           "name": "OpenAi account"
         }
       }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "309319c2-0a55-4fe7-bfa2-12ec9dc1a765",
+              "name": "output",
+              "value": "={{ $('Extract Contract Info').first().json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        5680,
+        2016
+      ],
+      "id": "cef96d89-b331-4f0c-9e6d-f8bd7558623f",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e059b3f6-abd4-4a8f-8ea5-b3d4ff99cab4",
+              "name": "output",
+              "value": "={{ $('Extract Contract Info').first().json.output }}",
+              "type": "string"
+            },
+            {
+              "id": "e1f6c03d-a163-40bb-9db4-0e2d4eac3b2e",
+              "name": "contract_id",
+              "value": "={{ $('Copy Hop Dong').first().json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "4544d6d6-62ea-4be1-8689-022ffd73a9ef",
+              "name": "contract_name",
+              "value": "={{ $('Copy Hop Dong').first().json.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        6896,
+        1904
+      ],
+      "id": "d34d3142-68ac-4c1a-8804-60942b1f236f",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        6608,
+        1904
+      ],
+      "id": "b666e73c-cbee-4fdc-8dba-4f8e411f6fd8",
+      "name": "Aggregate"
     }
   ],
-  "pinData": {},
   "connections": {
     "When chat message received": {
       "main": [
@@ -784,7 +854,7 @@
       "main": [
         [
           {
-            "node": "Format Contract Data",
+            "node": "Edit Fields",
             "type": "main",
             "index": 0
           }
@@ -806,7 +876,7 @@
       "main": [
         [
           {
-            "node": "Tong Hop Thong Tin Hop Dong va Link1",
+            "node": "Aggregate",
             "type": "main",
             "index": 0
           }
@@ -903,19 +973,44 @@
           }
         ]
       ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Format Contract Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Tong Hop Thong Tin Hop Dong va Link1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": true,
-  "settings": {
-    "executionOrder": "v1",
-    "timezone": "Asia/Ho_Chi_Minh",
-    "callerPolicy": "workflowsFromSameOwner"
-  },
-  "versionId": "0c9a2ebc-77f1-41da-8da4-ab580a5373ef",
+  "pinData": {},
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "fa9a70c3aa88c71b433aff23e68985f04c504323bb044fa77f3e8e9d54f43830"
-  },
-  "id": "L96fNbg6TMaUySlW",
-  "tags": []
+    "instanceId": "9fde6bf1cbed6305030f8acc13711204a75d782b218b963e83a2bb039f8b3728"
+  }
 }
